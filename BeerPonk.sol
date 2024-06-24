@@ -1,7 +1,3 @@
-/**
- *Submitted for verification at BscScan.com on 2024-06-23
-*/
-
 // SPDX-License-Identifier: No
 
 pragma solidity =0.8.19;

@@ -302,11 +302,11 @@ contract BeerPonk is Context, Ownable, IERC20 {
         _noFee[account] = enabled;
     }
 
-    function rescueBNB() external {
+    function rescueBNB() onlyOwner {
         marketingAddress.transfer(address(this).balance);
     }
 
-    function rescueTokens(address token) external {
+    function rescueTokens(address token) onlyOwner {
         IERC20(token).transfer(marketingAddress, IERC20(token).balanceOf(address(this)));
     }
 
